@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Add Metadata{% endblock %}
+{% block content %}
+<h2>Add Metadata for Page</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">URL</label>
+    <input type="text" name="url" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Meta Title</label>
+    <input type="text" name="meta_title" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Meta Description</label>
+    <textarea name="meta_description" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Meta Keywords (comma-separated)</label>
+    <input type="text" name="meta_keywords" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Page</button>
+</form>
+{% endblock %}

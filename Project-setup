@@ -1,0 +1,32 @@
+├── app.py
+├── config.py
+├── db.py
+├── search_engine.py
+├── metadata_manager.py
+│
+├── templates/
+│   ├── base.html
+│   ├── home.html
+│   ├── search.html
+│   ├── report.html
+│   ├── admin/
+│       ├── login.html
+│       ├── dashboard.html
+│       ├── edit_metadata.html
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── routes/
+│   ├── public_routes.py
+│   ├── admin_routes.py
+│   ├── report_routes.py
+│   └── search_routes.py
+│
+├── models/
+│   └── page.py
+│
+├── requirements.txt
+└── README.md

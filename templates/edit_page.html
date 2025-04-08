@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Edit Metadata{% endblock %}
+{% block content %}
+<h2>Edit Metadata for {{ page.title }}</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" value="{{ page.title }}" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">URL</label>
+    <input type="text" name="url" class="form-control" value="{{ page.url }}" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Meta Title</label>
+    <input type="text" name="meta_title" class="form-control" value="{{ page.meta_title }}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Meta Description</label>
+    <textarea name="meta_description" class="form-control">{{ page.meta_description }}</textarea>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Meta Keywords (comma-separated)</label>
+    <input type="text" name="meta_keywords" class="form-control" value="{{ page.meta_keywords }}">
+  </div>
+  <button type="submit" class="btn btn-success">Update</button>
+  <a href="{{ url_for('home') }}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}
